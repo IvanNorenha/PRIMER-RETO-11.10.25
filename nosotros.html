@@ -1,223 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
-    <style>
-        :root{
-            --nav-size: 20px;
-            --footer-title: 36px;
-            --footer-item: 18px;
-            --footer-copy: 16px;
-            --about-title: 56px;
-            --about-text: 18px;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 35px;
-            margin-bottom: 20px;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #eee;
-            margin: 0;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 50px;
-            margin-bottom: 0 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            flex-grow: 1;
-            text-align: center;
-            padding: 15px 0;
-            transition: background-color 0.3s;
-            font-size: var(--nav-size);
-            font-family: "Georgia", serif;
-        }
-
-        nav a:hover {
-            background-color: #ffffff;
-        }
-        
-        .titulo-negro { color: black; }
-        .titulo-azul  { color: rgb(95, 95, 241); }
-
-        footer { 
-            margin-top: 50px;
-            text-align: center; 
-        }
-
-        footer .footer-wrap { 
-            max-width: 1200px; 
-            margin: 20px auto; 
-        }
-
-        footer table { width: 100%; 
-        }
-
-        footer td { 
-            vertical-align: top; 
-            text-align: left; 
-        }
-
-        footer h3 { 
-            font-family: serif; 
-            font-size: var(--footer-title); 
-            margin: 0 0 15px; 
-            text-align: center;
-        }
-
-        footer p { 
-            margin: 8px 0; 
-            font-size: var(--footer-item); 
-        }
-
-        .footer-copy { 
-            margin: 20px 0 30px; 
-            font-size: var(--footer-copy); 
-        }
-
-        .sobre-nosotros-page { 
-            max-width: 1200px; 
-            margin: 40px auto 60px; 
-            padding: 0 20px; 
-        }
-
-        .sobre-nosotros-page h2 { 
-            font-family: serif; 
-            font-size: var(--about-title); 
-            font-weight: 700; 
-            text-align: center; 
-            margin: 20px 0 30px; 
-        }
-
-        .sn-layout { 
-            display: flex; 
-            gap: 40px; 
-            align-items: stretch; 
-        }
-
-        .sn-imagen { 
-            flex: 1; 
-        }
-
-        .sn-imagen img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            display: block; 
-        }
-
-        .sn-texto { 
-            flex: 1; 
-            font-size: var(--about-text); 
-            line-height: 1.9; 
-        }
-
-        @media (max-width: 900px){
-            .sobre-nosotros-page h2 { font-size: 40px; }
-            .sn-layout { flex-direction: column; gap: 24px; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Tienda Muebles</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header>
-        <div>
-            <h1>
-               <span class="titulo-negro">TIENDA</span>
-               <span class="titulo-azul">MUEBLES</span>
-            </h1>
-        </div>
-        <hr>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="tienda.html">Tienda</a>
-            <a href="blog.html">Blog</a>
-            <a href="galeria.html">Galería</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
+<body class="page-nosotros">
+  <header>
+    <div>
+      <h1>
+        <span class="titulo-negro">TIENDA</span>
+        <span class="titulo-azul">MUEBLES</span>
+      </h1>
+    </div>
+    <hr>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="blog.html">Blog</a>
+      <a href="galeria.html">Galería</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
 
-    <main>
-        <section class="sobre-nosotros-page">
-            <h2>Sobre Nosotros</h2>
-            <div class="sn-layout">
-                <div class="sn-imagen">
-                    <img src="./img/nosotros.jpg" alt="Sala y sofá">
-                </div>
-                <div class="sn-texto">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores debitis quis
-                        consectetur animi beatae mollitia itaque ea dicta eos. Totam repellat temporibus
-                        autem aspernatur necessitatibus perspiciatis ea iste laborum ipsum!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores debitis quis
-                        consectetur animi beatae mollitia itaque ea dicta eos. Totam repellat temporibus
-                        autem aspernatur necessitatibus perspiciatis ea iste laborum ipsum!
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <hr>
-        <div class="footer-wrap">
-            <table border="0" cellspacing="0" cellpadding="20">
-                <tr valign="top">
-                    <td width="33%">
-                        <h3>Categorías</h3>
-                        <p>Cocina</p>
-                        <p>Oficina</p>
-                        <p>Jardín</p>
-                        <p>Cochera</p>
-                        <p>Dormitorios</p>
-                    </td>
-                    <td width="33%">
-                        <h3>Sobre Nosotros</h3>
-                        <p>Nuestra Historia</p>
-                        <p>Misión, Visión y Valores</p>
-                        <p>Carreras</p>
-                        <p>Política de Privacidad</p>
-                        <p>Términos del Servicio</p>
-                    </td>
-                    <td width="33%">
-                        <h3>Soporte</h3>
-                        <p>Preguntas Frecuentes</p>
-                        <p>Ayuda en línea</p>
-                        <p>Confianza y Seguridad</p>
-                    </td>
-                </tr>
-            </table>
+  <main>
+    <section class="sobre-nosotros-page">
+      <h2>Sobre Nosotros</h2>
+      <div class="sn-layout">
+        <div class="sn-imagen">
+          <img src="./img/nosotros.jpg" alt="Sala y sofá">
         </div>
-        <p class="footer-copy">Todos los derechos Reservados, TiendaMuebles</p>
-    </footer>
-    
+        <div class="sn-texto">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores debitis quis
+            consectetur animi beatae mollitia itaque ea dicta eos. Totam repellat temporibus
+            autem aspernatur necessitatibus perspiciatis ea iste laborum ipsum!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores debitis quis
+            consectetur animi beatae mollitia itaque ea dicta eos. Totam repellat temporibus
+            autem aspernatur necessitatibus perspiciatis ea iste laborum ipsum!
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <div class="footer-wrap">
+      <table border="0" cellpadding="20" cellspacing="0">
+        <tr valign="top">
+          <td width="33%">
+            <h3>Categorías</h3>
+            <p>Cocina</p>
+            <p>Oficina</p>
+            <p>Jardín</p>
+            <p>Cochera</p>
+            <p>Dormitorios</p>
+          </td>
+          <td width="33%">
+            <h3>Sobre Nosotros</h3>
+            <p>Nuestra Historia</p>
+            <p>Misión, Visión y Valores</p>
+            <p>Carreras</p>
+            <p>Política de Privacidad</p>
+            <p>Términos del Servicio</p>
+          </td>
+          <td width="33%">
+            <h3>Soporte</h3>
+            <p>Preguntas Frecuentes</p>
+            <p>Ayuda en línea</p>
+            <p>Confianza y Seguridad</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p class="footer-copy">Todos los derechos Reservados, TiendaMuebles</p>
+  </footer>
 </body>
 </html>

@@ -1,319 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Contacto</title>
-<style>
-    :root{
-    --nav-size:20px;
-    --footer-title:36px;
-    --footer-item:18px;
-    --footer-copy:16px;
-    --brand:#065985;
-    --btn:#8bc34a;
-    --card-width:550px;
-    --ctrl-width:50%;
-    }
-
-    body{
-    font-family:Arial, Helvetica, sans-serif;
-    margin:0;
-    color:#111;
-    }
-
-    header{
-    background:#fff;
-    text-align:center;
-    padding:20px 0;
-    }
-
-    header h1{
-        font-size:35px;
-        margin:0 0 20px;
-    }
-
-    .titulo-negro{
-        color:#000;
-    }
-
-    .titulo-azul{
-        color:rgb(95,95,241);
-    }
-
-    hr{
-        height:1px;
-        background:#eee;
-        border:0;margin:0;
-    }
-
-    nav{display:flex;
-        justify-content:space-around;
-        align-items:center;
-        height:50px;
-    }
-
-    nav a{
-        font-family:Georgia, serif;
-        text-decoration:none;
-        color:#000;
-        font-weight:bold;
-        font-size:var(--nav-size);
-        padding:15px 0;
-    }
-
-    .container{
-        max-width:1180px;
-        margin:0 auto;
-        padding:0 20px;
-    }
-
-    .page-title{
-        font-family:Georgia, serif;
-        font-size:44px;
-        text-align:center;
-        margin:28px 0 14px;
-    }
-
-    .card{
-        border:1px solid #94a3b8;
-        border-radius:3px;
-        box-shadow:0 0 0 1px #e5e7eb inset;
-        margin:34px auto 46px;
-        padding:36px 28px 32px;
-        max-width:var(--card-width);
-        position:relative;
-    }
-
-    .card-title{
-        background:var(--brand);
-        color:#fff;
-        width:78%;
-        margin:-58px auto 26px;
-        border-radius:2px;
-        padding:16px 18px;
-        text-align:center;
-        font-family:Georgia, serif;
-        font-size:28px;
-        letter-spacing:.5px;
-    }
-
-    .form-row{
-        display:flex;
-        align-items:center;
-        gap:18px;
-        margin:14px 0;
-    }
-
-    .label{
-        min-width:120px;
-    }
-    .ctrl{
-        flex:0 0 var(--ctrl-width);
-    }
-
-    .ctrl input,.ctrl select,.ctrl textarea{
-        width:100%;
-        padding:14px;
-        border:1px solid #cbd5e1;
-        border-radius:3px;
-        font-size:16px;
-    }
-    .ctrl textarea{
-        min-height:170px;
-        resize:vertical;
-    }
-
-    .radio-line{
-        display:flex;
-        align-items:center;
-        gap:12px;
-        margin:16px 0;
-    }
-
-    .radio-line .label{
-        min-width:120px;
-    }
-    .radio-line input[type="radio"]{
-        appearance:auto;
-        width:18px;
-        height:18px;
-        vertical-align:middle;
-    }
-
-    .submit-wrap{
-        max-width:var(--card-width);
-        margin:0 auto 60px;
-        padding:0 28px;
-    }
-
-    .btn{
-        display:inline-block;
-        background:var(--btn);
-        color:#fff;
-        font-weight:800;
-        text-transform:uppercase;
-        border-radius:4px;
-        padding:14px 26px;
-        text-decoration:none;
-    }
-
-    .btn:focus{
-        outline:2px solid #3b82f6;
-        outline-offset:2px;
-    }
-
-    footer{
-        margin-top:50px;
-        text-align:center;
-    }
-
-    footer .footer-wrap{
-        max-width:1200px;
-        margin:20px auto;
-    }
-
-    footer table{
-        width:100%;
-    }
-
-    footer td{
-        vertical-align:top;
-        text-align:left;
-    }
-
-    footer h3{
-        font-family:serif;
-        font-size:var(--footer-title);
-        margin:0 0 15px;
-    }
-
-    footer p{
-        margin:8px 0;
-        font-size:var(--footer-item);
-    }
-
-    .footer-copy{
-        margin:20px 0 30px;
-        font-size:var(--footer-copy);
-    }
-
-    @media (max-width:900px){
-    .card-title{width:88%}
-    .ctrl{flex:1 1 auto}
-    .form-row{flex-direction:column;align-items:flex-start}
-    .label{min-width:0}
-    .radio-line .label{min-width:0}
-    }
-
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Tienda Muebles</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="page-contacto">
+  <!-- Encabezado del sitio -->
   <header>
-    <h1><span class="titulo-negro">TIENDA</span> <span class="titulo-azul">MUEBLES</span></h1>
-    <hr/>
-    <nav>
+    <div>
+      <h1>
+        <span class="titulo-negro">TIENDA</span>
+        <span class="titulo-azul">MUEBLES</span>
+      </h1>
+    </div>
+    <hr>
+    <nav aria-label="Navegación principal">
       <a href="index.html">Inicio</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="tienda.html">Tienda</a>
       <a href="blog.html">Blog</a>
       <a href="galeria.html">Galería</a>
-      <a href="contacto.html">Contacto</a>
+      <a href="contacto.html" aria-current="page">Contacto</a>
     </nav>
   </header>
 
-  <main class="container">
-    <h2 class="page-title">Contacto</h2>
+  <!-- CONTENIDO: Página de Contacto -->
+  <main class="main container contacto-page">
+    <header class="page-header">
+      <h1>Contacto</h1>
+    </header>
 
-    <section class="card">
-      <div class="card-title">TUS DATOS</div>
-      <div class="form-row">
-        <div class="label">Nombre:</div>
-        <div class="ctrl"><input type="text" placeholder="Tu Nombre"></div>
-      </div>
-      <div class="form-row">
-        <div class="label">Asunto:</div>
-        <div class="ctrl"><input type="text" placeholder="Tu Asunto"></div>
-      </div>
-      <div class="form-row">
-        <div class="label">E-mail:</div>
-        <div class="ctrl"><input type="email" placeholder="Tu Email"></div>
-      </div>
-      <div class="form-row">
-        <div class="label">Teléfono:</div>
-        <div class="ctrl"><input type="tel" placeholder="Tu Teléfono"></div>
-      </div>
-      <div class="form-row">
-        <div class="label">Mensaje:</div>
-        <div class="ctrl"><textarea placeholder="Escribe tu mensaje…"></textarea></div>
-      </div>
-    </section>
+    <section class="contacto">
+      <h2 class="visually-hidden">Formulario de contacto</h2>
 
-    <section class="card">
-      <div class="card-title">PAÍS</div>
-      <div class="form-row">
-        <div class="label">País</div>
-        <div class="ctrl">
-          <select>
-            <option>-- Seleccione --</option>
-            <option>México</option>
-            <option>Perú</option>
-            <option>Colombia</option>
-            <option>Argentina</option>
-            <option>España</option>
-            <option>Chile</option>
-          </select>
+      <form class="form" action="#" method="post" novalidate>
+        <!-- 1) TUS DATOS -->
+        <fieldset class="fieldset">
+          <legend>Tus Datos</legend>
+
+          <div class="field">
+            <label for="nombre">Nombre <span aria-hidden="true">*</span></label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name"
+                   placeholder="Tu nombre completo" required>
+          </div>
+
+          <div class="field">
+            <label for="asunto">Asunto <span aria-hidden="true">*</span></label>
+            <input id="asunto" name="asunto" type="text"
+                   placeholder="Motivo del mensaje" required>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail <span aria-hidden="true">*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email"
+                   placeholder="tucorreo@dominio.com" required>
+          </div>
+
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel"
+                   placeholder="+51 999 999 999"
+                   pattern="^[0-9+()\s-]{6,}$">
+            <small class="help">Acepta números, espacios y símbolos + ( ) -</small>
+          </div>
+
+          <div class="field">
+            <label for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
+            <textarea id="mensaje" name="mensaje" rows="5"
+                      placeholder="Escribe tu mensaje aquí..." required></textarea>
+          </div>
+        </fieldset>
+
+        <!-- 2) PAÍS -->
+        <fieldset class="fieldset">
+          <legend>País</legend>
+          <div class="field">
+            <label for="pais">País</label>
+            <select id="pais" name="pais">
+              <option value="">-- Seleccione --</option>
+              <option value="mx">México</option>
+              <option value="pe">Perú</option>
+              <option value="co">Colombia</option>
+              <option value="ar">Argentina</option>
+              <option value="es">España</option>
+              <option value="cl">Chile</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <!-- 3) INFORMACIÓN EXTRA -->
+        <fieldset class="fieldset">
+          <legend>Información Extra</legend>
+
+          <!-- Cliente / Proveedor: vertical, radio a la derecha -->
+          <div class="radio-group">
+            <label class="radio-row" for="tipo-cliente">
+              <span>Cliente</span>
+              <input id="tipo-cliente" type="radio" name="tipo" value="cliente" checked>
+            </label>
+
+            <label class="radio-row" for="tipo-proveedor">
+              <span>Proveedor</span>
+              <input id="tipo-proveedor" type="radio" name="tipo" value="proveedor">
+            </label>
+          </div>
+
+          <!-- Campo único en blanco -->
+          <div class="field">
+            <label for="categoria_text">Categoría de Interés</label>
+            <input id="categoria_text" name="categoria_text" type="text" placeholder="">
+          </div>
+        </fieldset>
+
+        <!-- Botón único -->
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">ENVIAR FORMULARIO</button>
         </div>
-      </div>
-    </section>
 
-    <section class="card">
-      <div class="card-title">INFORMACIÓN EXTRA</div>
-      <div class="radio-line">
-        <div class="label">Cliente</div>
-        <input name="tipo" type="radio"/>
-      </div>
-      <div class="radio-line">
-        <div class="label">Proveedor</div>
-        <input name="tipo" type="radio"/>
-      </div>
-      <div class="form-row">
-        <div class="label">Categoría de<br/>Interés</div>
-        <div class="ctrl">
-          <select>
-            <option>-- Seleccione --</option>
-            <option>Cocina</option>
-            <option>Exterior</option>
-            <option>Recámaras</option>
-            <option>Oficina</option>
-            <option>Televisión</option>
-          </select>
-        </div>
-      </div>
+        <p class="form-legal">
+          Al enviar aceptas nuestra <a href="./privacidad.html">Política de Privacidad</a>.
+        </p>
+      </form>
     </section>
-
-    <div class="submit-wrap">
-      <a href="#" class="btn">Enviar Formulario</a>
-    </div>
   </main>
 
+  <!-- Pie de página -->
   <footer>
     <hr>
     <div class="footer-wrap">
-      <table border="0" cellspacing="0" cellpadding="20">
+      <table border="0" cellpadding="20" cellspacing="0">
         <tr valign="top">
           <td width="33%">
             <h3>Categorías</h3>
-            <p>Cocina</p><p>Oficina</p><p>Jardín</p><p>Cochera</p><p>Dormitorios</p>
+            <p>Cocina</p>
+            <p>Oficina</p>
+            <p>Jardín</p>
+            <p>Cochera</p>
+            <p>Dormitorios</p>
           </td>
           <td width="33%">
             <h3>Sobre Nosotros</h3>
-            <p>Nuestra Historia</p><p>Misión, Visión y Valores</p><p>Carreras</p>
-            <p>Política de Privacidad</p><p>Términos del Servicio</p>
+            <p>Nuestra Historia</p>
+            <p>Misión, Visión y Valores</p>
+            <p>Carreras</p>
+            <p>Política de Privacidad</p>
+            <p>Términos del Servicio</p>
           </td>
           <td width="33%">
             <h3>Soporte</h3>
-            <p>Preguntas Frecuentes</p><p>Ayuda en línea</p><p>Confianza y Seguridad</p>
+            <p>Preguntas Frecuentes</p>
+            <p>Ayuda en línea</p>
+            <p>Confianza y Seguridad</p>
           </td>
         </tr>
       </table>

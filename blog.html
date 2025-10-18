@@ -1,216 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog</title>
-  <style>
-    :root{
-      --nav-size:20px;
-      --footer-title:36px;
-      --footer-item:18px;
-      --footer-copy:16px;
-      --grey:#6b7280;
-      --border:#e5e7eb;
-      --btn:#8bc34a;
-    }
-    body{
-        font-family:Arial, sans-serif;
-        margin:0;
-        padding:0
-    }
-
-    header{
-        background:#fff;
-        padding:20px 0;
-        text-align:center
-    }
-
-    header h1{
-        font-size:35px;
-        margin:0 0 20px
-    }
-
-    hr{
-        border:0;
-        height:1px;
-        background:#eee;
-        margin:0
-    }
-
-    nav{
-        display:flex;
-        justify-content:space-around;
-        align-items:center;
-        height:50px
-    }
-
-    nav a{
-        text-decoration:none;
-        color:#000;
-        font-weight:bold;
-        flex-grow:1;
-        text-align:center;
-        padding:15px 0;
-        font-size:var(--nav-size);
-        font-family:"Georgia",serif
-    }
-
-    .titulo-negro{color:#000}
-    .titulo-azul{color:rgb(95,95,241)}
-
-    .contenedor{
-        max-width:1180px;
-        margin:0 auto;
-        padding:0 20px
-    }
-
-    .blog-encabezado{
-        font-family:serif;
-        font-size:40px;
-        text-align:center;
-        margin:36px 0 14px
-    }
-
-    .layout{
-        display:grid;
-        grid-template-columns:2fr 1fr;
-        gap:36px;
-        align-items:start
-    }
-
-    .layout>.entrada{
-        grid-column:1
-    }
-
-    .layout>.sidebar{
-        grid-column:2
-    }
-
-    .entrada{
-        border-top:0;
-        padding-top:0
-    }
-
-    .entrada-linea{
-        border-top:1px solid var(--border);
-        padding-top:26px
-    }
-
-    .entrada h2{
-        font-family:serif;
-        font-size:32px;
-        margin:0 0 14px
-    }
-
-    .entrada figure{
-        margin:0;
-        width:100%
-    }
-
-    .entrada img{
-        display:block;
-        width:100% !important;
-        height:auto
-    }
-
-    .meta-row{
-        display:flex;
-        justify-content:space-between;
-        gap:16px;color:#0b57d0;
-        font-size:14px;
-        margin:12px 0 18px
-    }
-
-    .meta-row span{
-        color:#000
-    }
-
-    .entrada p{
-        line-height:1.8;color:#111;
-        margin:0 0 16px
-    }
-
-    .btn-leer{
-        display:inline-block;
-        background:var(--btn);
-        color:#fff;
-        text-decoration:none;
-        font-weight:700;
-        text-transform:uppercase;
-        padding:12px 28px;
-        border-radius:3px
-    }
-
-    .sidebar h3{
-        font-family:serif;
-        font-size:24px;
-        margin:0 0 12px
-    }
-
-    .sidebar ul{
-        margin:0;
-        padding-left:18px
-    }
-
-    .sidebar li{
-        margin:8px 0
-    }
-
-    .sidebar a,
-    .sidebar a:visited,
-    .sidebar a:hover,
-    .sidebar a:active,
-    .sidebar a:focus{
-        text-decoration:none;
-        color:#111
-    }
-
-    @media (max-width:900px){
-      .layout{grid-template-columns:1fr}
-      .blog-encabezado{font-size:34px}
-      .entrada h2{font-size:28px}
-    }
-
-    footer{
-        margin-top:50px;
-        text-align:center
-    }
-
-    footer .footer-wrap{
-        max-width:1200px;
-        margin:20px auto
-    }
-
-    footer table{
-        width:100%
-    }
-
-    footer td{
-        vertical-align:top;
-        text-align:left
-    }
-
-    footer h3{
-        font-family:serif;
-        font-size:var(--footer-title);
-        margin:0 0 15px
-    }
-
-    footer p{
-        margin:8px 0;
-        font-size:var(--footer-item)
-    }
-    .footer-copy{
-        margin:20px 0 30px;
-        font-size:var(--footer-copy)
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Tienda Muebles</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body class="page-blog">
   <header>
     <div>
-      <h1><span class="titulo-negro">TIENDA</span> <span class="titulo-azul">MUEBLES</span></h1>
+      <h1>
+        <span class="titulo-negro">TIENDA</span>
+        <span class="titulo-azul">MUEBLES</span>
+      </h1>
     </div>
     <hr>
     <nav>
@@ -224,57 +27,90 @@
   </header>
 
   <main>
-    <div class="contenedor">
-      <h2 class="blog-encabezado">Nuestro Blog</h2>
+    <div class="container">
+      <section class="blog-section layout">
+        <h2>Nuestro Blog</h2>
 
-      <div class="layout">
-        <section class="entrada">
-          <h2>Guía de Colores</h2>
-          <figure>
-            <img src="./img/nosotros.jpg" alt="Guía de Colores">
-          </figure>
-          <div class="meta-row">
-            <p><span>Fecha:</span> 22 de Octubre de 2022</p>
-            <p><span>Escrito por:</span> TiendaMuebles</p>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium id numquam ducimus alias commodi eveniet, impedit amet! Quidem et tempore obcaecati vitae voluptatibus ipsam? Quae repudiandae sequi quas numquam nam.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati provident beatae fugiat laudantium possimus harum, magnam architecto soluta doloribus itaque dolores amet maiores pariatur ea quisquam voluptatem numquam? In, nobis!</p>
-          <a href="#" class="btn-leer">Leer</a>
-        </section>
+        <div class="posts">
+          <!-- Artículo 1 -->
+          <article class="entrada-blog">
+            <div class="entrada-imagen overlay-wrap">
+              <!-- TÍTULO SOBRE LA IMAGEN -->
+              <h3 class="overlay-title">Guía de Colores</h3>
+              <img src="./img/nosotros.jpg" alt="Guía de Colores">
+            </div>
 
+            <div class="entrada-contenido">
+              <div class="post-meta">
+                <p class="meta fecha">Fecha: <span>22 de Octubre de 2022</span></p>
+                <p class="meta autor">Escrito por: <span>TiendaMuebles</span></p>
+              </div>
+
+              <p class="fuente-parrafo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium id numquam ducimus alias
+                commodi eveniet, impedit amet! Quidem et tempore obcaecati vitae voluptatibus ipsam? Quae
+                repudiandae sequi quas numquam nam.
+              </p>
+              <p class="fuente-parrafo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati provident beatae fugiat
+                laudantium possimus harum, magnam architecto soluta doloribus itaque dolores amet maiores
+                pariatur ea quisquam voluptatem numquam? In, nobis!
+              </p>
+              <a href="#" class="btn btn--primary">LEER</a>
+            </div>
+          </article>
+          
+          <hr>
+          
+          <!-- Artículo 2 -->
+          <article class="entrada-blog">
+            <div class="entrada-imagen overlay-wrap">
+              <!-- TÍTULO SOBRE LA IMAGEN -->
+              <h3 class="overlay-title">Guía de Colores</h3>
+              <img src="./img/nosotros.jpg" alt="Guía de Colores 2">
+            </div>
+
+            <div class="entrada-contenido">
+              <div class="post-meta">
+                <p class="meta fecha">Fecha: <span>22 de Octubre de 2022</span></p>
+                <p class="meta autor">Escrito por: <span>TiendaMuebles</span></p>
+              </div>
+
+              <p class="fuente-parrafo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium id numquam ducimus alias
+                commodi eveniet, impedit amet! Quidem et tempore obcaecati vitae voluptatibus ipsam? Quae
+                repudiandae sequi quas numquam nam.
+              </p>
+              <p class="fuente-parrafo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati provident beatae fugiat
+                laudantium possimus harum, magnam architecto soluta doloribus itaque dolores amet maiores
+                pariatur ea quisquam voluptatem numquam? In, nobis!
+              </p>
+              <a href="#" class="btn btn--primary">LEER</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Sidebar STICKY -->
         <aside class="sidebar">
-          <h3>Otras Entradas de Blog</h3>
-          <ul>
-            <li><a href="#">Guía de Colores</a></li>
-            <li><a href="#">Nuevos Modelos</a></li>
-            <li><a href="#">Guía para diseño de interiores</a></li>
-            <li><a href="#">Guía para diseño de exteriores</a></li>
-          </ul>
-        </aside>
-
-        <section class="entrada entrada-linea">
-          <h2>Guía de Colores</h2>
-          <figure>
-            <img src="./img/nosotros.jpg" alt="Guía de Colores">
-          </figure>
-          <div class="meta-row">
-            <p><span>Fecha:</span> 22 de Octubre de 2022</p>
-            <p><span>Escrito por:</span> TiendaMuebles</p>
+          <div class="widget">
+            <h3>Otras Entradas de Blog</h3>
+            <ul>
+              <li><a href="#">Guía de Colores</a></li>
+              <li><a href="#">Nuevos Modelos</a></li>
+              <li><a href="#">Guía para diseño de interiores</a></li>
+              <li><a href="#">Guía para diseño de exteriores</a></li>
+            </ul>
           </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium id numquam ducimus alias commodi eveniet, impedit amet! Quidem et tempore obcaecati vitae voluptatibus ipsam? Quae repudiandae sequi quas numquam nam.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati provident beatae fugiat laudantium possimus harum, magnam architecto soluta doloribus itaque dolores amet maiores pariatur ea quisquam voluptatem numquam? In, nobis!</p>
-          <a href="#" class="btn-leer">Leer</a>
-        </section>
-
-        <div></div>
-      </div>
+        </aside>
+      </section>
     </div>
   </main>
 
   <footer>
     <hr>
     <div class="footer-wrap">
-      <table border="0" cellspacing="0" cellpadding="20">
+      <table border="0" cellpadding="20" cellspacing="0">
         <tr valign="top">
           <td width="33%">
             <h3>Categorías</h3>
